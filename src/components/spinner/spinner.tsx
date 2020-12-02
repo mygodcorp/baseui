@@ -1,8 +1,7 @@
 import React, { FC } from 'react';
 import styled from '@emotion/styled';
 import { keyframes } from '@emotion/react';
-import { Spinner2 } from '@emotion-icons/evil';
-import Box, { BoxProps } from '../box';
+import Box, { BoxProps } from '@components/box';
 import { color, size, space } from 'styled-system';
 
 type Allowed = BoxProps;
@@ -22,7 +21,7 @@ const spin = keyframes`
   }
 `;
 
-const RotatingLoader = styled(Spinner2)<SpinnerProps>(
+const RotatingLoader = styled('svg')<SpinnerProps>(
   {
     animation: `${spin} 500ms linear 0s infinite`
   },
