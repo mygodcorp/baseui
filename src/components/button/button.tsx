@@ -1,7 +1,7 @@
 import React, { FC, ReactNode, ReactElement, forwardRef } from 'react';
 import styled, { CSSObject } from '@emotion/styled';
 import { SpaceProps, variant, BorderProps, border, compose } from 'styled-system';
-import Spinner from '@components/button';
+import Spinner from '@components/spinner';
 import Box, { BoxProps } from '@components/box';
 
 type AllowedOps = SpaceProps;

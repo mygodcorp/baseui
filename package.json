@@ -14,13 +14,10 @@
     "@emotion/core": "^10.1.1",
     "@emotion/react": "^11.1.1",
     "@emotion/styled": "^11.0.0",
-    "@types/react": "^17.0.0",
-    "@types/styled-system": "^5.1.10",
     "emotion-icons": "^2.15.0",
     "emotion-reset": "^2.0.7",
     "polished": "^4.0.5",
-    "styled-system": "^5.1.5",
-    "tsconfig-paths-webpack-plugin": "^3.3.0"
+    "styled-system": "^5.1.5"
   },
   "peerDependencies": {
     "react": "^17.0.1",
@@ -35,24 +32,21 @@
     "babel-loader": "^8.2.2",
     "chromatic": "^5.4.0",
     "react-docgen-typescript": "^1.20.5",
-    "typescript": "^4.1.2"
+    "typescript": "^4.1.2",
+    "tsconfig-paths-webpack-plugin": "^3.3.0",
+    "@types/react": "^17.0.0",
+    "@types/styled-system": "^5.1.10"
   },
   "bit": {
     "env": {
-      "compiler": {
-        "bit.envs/compilers/react-typescript@3.1.61": {
-          "rawConfig": {
-            "tsconfig": {
-              "compilerOptions": {
-                "target": "ES5",
-                "module": "esnext"
-              }
-            }
-          }
-        }
-      }
+      "compiler": "bit.envs/compilers/react-typescript@3.1.61"
     },
-    "componentsDefaultDirectory": "components/{name}",
-    "packageManager": "yarn"
+    "componentsDefaultDirectory": "src/components/{name}",
+    "packageManager": "yarn",
+    "resolveModules": {
+      "aliases": {
+        "@components": "src/components"
+      }
+    }
   }
 }
