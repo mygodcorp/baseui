@@ -1,6 +1,6 @@
 {
   "name": "@benjammartin/basic",
-  "version": "1.0.13",
+  "version": "1.0.14",
   "description": "Box",
   "main": "lib",
   "author": "benjammartin <benjammartin@gmail.com>",
@@ -14,14 +14,14 @@
     "access": "public"
   },
   "peerDependencies": {
-    "react": "^17.0.1",
-    "react-dom": "^17.0.1",
     "@emotion/core": "^10.1.1",
     "@emotion/react": "^11.1.1",
     "@emotion/styled": "^11.0.0",
     "emotion-icons": "^2.15.0",
     "emotion-reset": "^2.0.7",
     "polished": "^4.0.5",
+    "react": "^17.0.1",
+    "react-dom": "^17.0.1",
     "styled-system": "^5.1.5"
   },
   "repository": {
