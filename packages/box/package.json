@@ -1,5 +1,5 @@
 {
-  "name": "@baseui/box",
+  "name": "@benjammartin/box",
   "version": "1.0.6",
   "description": "Box",
   "main": "lib/index.js",
@@ -28,5 +28,5 @@
   "bugs": {
     "url": "https://github.com/mygodcorp/baseui/issues"
   },
-  "gitHead": "c64693348866de60f17ddb83afb11f7d199d2930"
+  "gitHead": "cb646a079e6f000721b25e710ea5c03c31602188"
 }
