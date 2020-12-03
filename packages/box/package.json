@@ -14,6 +14,9 @@
     "lib": "lib",
     "test": "__tests__"
   },
+  "publishConfig": {
+    "access": "public"
+  },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/mygodcorp/baseui.git"
@@ -24,5 +27,6 @@
   },
   "bugs": {
     "url": "https://github.com/mygodcorp/baseui/issues"
-  }
+  },
+  "gitHead": "179d4fa4ad87aef5bb94cdafeebef27a11f5252a"
 }
