@@ -42,6 +42,7 @@
     "build": "concurrently yarn:build:*",
     "build:esm": "tsc --module es2015 --target es5 --outDir lib/esm",
     "build:cjs": "tsc --module commonjs --target es5 --outDir lib/cjs",
+    "build:types": "tsc --emitDeclarationOnly --declaration --declarationDir lib/types",
     "test": "echo \"Error: run tests from root\" && exit 1"
   },
   "bugs": {
