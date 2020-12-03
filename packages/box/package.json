@@ -8,6 +8,22 @@
     "dist",
     "CHANGELOG.md"
   ],
-  "author": "",
-  "license": "MIT"
+  "author": "benjammartin <benjammartin@gmail.com>",
+  "license": "MIT",
+  "homepage": "https://github.com/mygodcorp/baseui#readme",
+  "directories": {
+    "lib": "lib",
+    "test": "__tests__"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/mygodcorp/baseui.git"
+  },
+  "scripts": {
+    "tsc": "tsc",
+    "test": "echo \"Error: run tests from root\" && exit 1"
+  },
+  "bugs": {
+    "url": "https://github.com/mygodcorp/baseui/issues"
+  }
 }
