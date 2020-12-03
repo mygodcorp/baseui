@@ -23,12 +23,10 @@ export type BoxProps = SpaceProps &
   BorderProps &
   PositionProps;
 
-const Box = styled.div<BoxProps>(
+export const Box = styled.div<BoxProps>(
   {
     boxSizing: 'border-box',
     minWidth: 0
   },
   compose(space, color, layout, flexbox, border, position, border)
 );
-
-export default Box;

@@ -2,7 +2,10 @@
   "name": "@benjammartin/basic",
   "version": "1.0.14",
   "description": "Box",
-  "main": "lib",
+  "main": "dist/cjs/index.js",
+  "module": "dist/esm/index.js",
+  "types": "dist/types/index.d.ts",
+  "typings": "dist/types/index.d.ts",
   "author": "benjammartin <benjammartin@gmail.com>",
   "license": "MIT",
   "homepage": "https://github.com/mygodcorp/baseui#readme",
@@ -10,6 +13,9 @@
     "lib": "lib",
     "test": "__tests__"
   },
+  "files": [
+    "dist"
+  ],
   "publishConfig": {
     "access": "public"
   },
@@ -29,7 +35,9 @@
     "url": "git+https://github.com/mygodcorp/baseui.git"
   },
   "scripts": {
-    "tsc": "tsc",
+    "build": "concurrently yarn:build:*",
+    "build:esm": "tsc --module es2015 --target es5 --outDir lib/esm",
+    "build:cjs": "tsc --module commonjs --target es5 --outDir lib/cjs",
     "test": "echo \"Error: run tests from root\" && exit 1"
   },
   "bugs": {

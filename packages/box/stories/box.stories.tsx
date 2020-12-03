@@ -1,6 +1,6 @@
 import * as React from 'react';
 import { Meta } from '@storybook/react/types-6-0';
-import Box from '../src';
+import { Box } from '../src';
 
 export default {
   title: 'Box',
