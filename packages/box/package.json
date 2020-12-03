@@ -2,12 +2,7 @@
   "name": "@benjammartin/box",
   "version": "1.0.12",
   "description": "Box",
-  "main": "lib/index.js",
-  "typings": "lib/index.d.ts",
-  "files": [
-    "dist",
-    "CHANGELOG.md"
-  ],
+  "main": "lib",
   "author": "benjammartin <benjammartin@gmail.com>",
   "license": "MIT",
   "homepage": "https://github.com/mygodcorp/baseui#readme",
