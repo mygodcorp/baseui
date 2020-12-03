@@ -3,7 +3,6 @@
   "version": "independent",
   "packages": ["packages/*"],
   "useWorkspaces": true,
-  "registry": "https://registry.npmjs.org/",
   "command": {
     "version": { "exact": true },
     "publish": {
