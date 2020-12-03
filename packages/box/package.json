@@ -26,12 +26,14 @@
   "dependencies": {
     "@emotion/react": "^11.1.1",
     "@emotion/styled": "^11.0.0",
-    "styled-system": "^5.1.5"
+    "styled-system": "^5.1.5",
+    "@types/styled-system": "5.1.10"
   },
   "peerDependencies": {
-    "@emotion/core": "^10.1.1",
-    "react": "^17.0.1",
-    "react-dom": "^17.0.1"
+    "react": "^17.0.1"
+  },
+  "devDependencies": {
+    "react": "^17.0.1"
   },
   "repository": {
     "type": "git",
