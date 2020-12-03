@@ -1,16 +1,13 @@
 {
   "compilerOptions": {
+    "esModuleInterop": true,
+    "skipLibCheck": true,
     "module": "commonjs",
+    "target": "es5",
+    "lib": ["es5", "es6", "es7", "es2017", "dom"],
     "jsx": "react",
-    "declaration": true,
-    "noImplicitAny": false,
-    "removeComments": true,
-    "noLib": false,
-    "emitDecoratorMetadata": true,
-    "experimentalDecorators": true,
-    "target": "es6",
-    "sourceMap": true,
-    "lib": ["es6"]
+    "removeComments": true
   },
+  "include": ["packages"],
   "exclude": ["node_modules"]
 }

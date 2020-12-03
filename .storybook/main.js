@@ -7,7 +7,7 @@ function resolve(dir) {
 }
 
 module.exports = {
-  stories: ['../packages/src/**/*.stories.@(js|jsx|ts|tsx)'],
+  stories: ['../packages/**/stories/*.stories.@(js|jsx|ts|tsx)'],
   addons: ['@storybook/addon-links', '@storybook/addon-essentials'],
   webpackFinal: async (config) => {
     config.resolve.plugins = config.resolve.plugins || [];
