@@ -1,17 +1,21 @@
 {
-  "name": "@benjammartin/basic",
+  "name": "@benjammartin/box",
   "version": "1.0.15",
   "description": "Box",
-  "main": "dist/cjs/index.js",
-  "module": "dist/esm/index.js",
-  "types": "dist/types/index.d.ts",
-  "typings": "dist/types/index.d.ts",
+  "main": "lib/cjs/index.js",
+  "module": "lib/esm/index.js",
   "author": "benjammartin <benjammartin@gmail.com>",
   "license": "MIT",
   "homepage": "https://github.com/mygodcorp/baseui#readme",
   "directories": {
     "lib": "lib",
     "test": "__tests__"
+  },
+  "exports": {
+    ".": {
+      "require": "./lib/cjs/index.js",
+      "default": "./lib/esm/index.js"
+    }
   },
   "files": [
     "dist"
