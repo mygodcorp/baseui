@@ -9,7 +9,7 @@ export default {
 
 export const Default: React.FC<{}> = () => {
   return (
-    <Button id="hello" loading variant="solid">
+    <Button id="hello" variant="solid">
       Hello
     </Button>
   );

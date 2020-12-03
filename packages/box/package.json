@@ -1,0 +1,13 @@
+{
+  "name": "@baseui/box",
+  "version": "1.0.0",
+  "description": "Box",
+  "main": "dist/index.js",
+  "module": "src/index.js",
+  "files": [
+    "dist",
+    "CHANGELOG.md"
+  ],
+  "author": "",
+  "license": "MIT"
+}

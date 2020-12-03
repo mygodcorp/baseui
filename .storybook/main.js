@@ -7,15 +7,11 @@ function resolve(dir) {
 }
 
 module.exports = {
-  stories: ['../src/**/*.stories.@(js|jsx|ts|tsx)'],
+  stories: ['../packages/src/**/*.stories.@(js|jsx|ts|tsx)'],
   addons: ['@storybook/addon-links', '@storybook/addon-essentials'],
   webpackFinal: async (config) => {
     config.resolve.plugins = config.resolve.plugins || [];
     config.resolve.plugins.push(new TsconfigPathsPlugin({}));
-    config.resolve.alias = {
-      ...config.resolve.alias,
-      '@components/*': resolve('../src/components/*')
-    };
     console.log(config.resolve);
     return {
       ...config,
@@ -23,10 +19,10 @@ module.exports = {
         ...config.resolve,
         alias: {
           ...config.resolve.alias,
+          '@components/*': resolve('../packages'),
           '@emotion/core': toPath('node_modules/@emotion/react'),
           'emotion-theming': toPath('node_modules/@emotion/react')
-        },
-        plugins: [new TsconfigPathsPlugin({ silent: false })]
+        }
       }
     };
   }

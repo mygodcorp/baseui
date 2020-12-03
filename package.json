@@ -1,7 +1,8 @@
 {
-  "name": "baseui",
-  "version": "1.0.14",
+  "name": "@baseui",
+  "version": "1.0.0",
   "description": "",
+  "private": true,
   "scripts": {
     "storybook": "start-storybook -p 6006",
     "build-storybook": "build-storybook",
@@ -10,10 +11,17 @@
   "keywords": [],
   "author": "@benjammartin",
   "license": "ISC",
+  "workspaces": {
+    "packages": [
+      "packages/*"
+    ]
+  },
   "dependencies": {
     "@emotion/core": "^10.1.1",
     "@emotion/react": "^11.1.1",
     "@emotion/styled": "^11.0.0",
+    "@types/react": "^17.0.0",
+    "@types/styled-system": "^5.1.10",
     "emotion-icons": "^2.15.0",
     "emotion-reset": "^2.0.7",
     "polished": "^4.0.5",
@@ -23,6 +31,9 @@
     "react": "^17.0.1",
     "react-dom": "^17.0.1"
   },
+  "resolutions": {
+    "@types/react": "^17.0.0"
+  },
   "devDependencies": {
     "@babel/core": "^7.12.9",
     "@storybook/addon-actions": "^6.1.9",
@@ -31,22 +42,9 @@
     "@storybook/react": "^6.1.9",
     "babel-loader": "^8.2.2",
     "chromatic": "^5.4.0",
+    "lerna": "^3.22.1",
     "react-docgen-typescript": "^1.20.5",
-    "typescript": "^4.1.2",
     "tsconfig-paths-webpack-plugin": "^3.3.0",
-    "@types/react": "^17.0.0",
-    "@types/styled-system": "^5.1.10"
-  },
-  "bit": {
-    "env": {
-      "compiler": "bit.envs/compilers/react-typescript@3.1.61"
-    },
-    "componentsDefaultDirectory": "src/components/{name}",
-    "packageManager": "yarn",
-    "resolveModules": {
-      "aliases": {
-        "@components": "src/components"
-      }
-    }
+    "typescript": "^4.1.2"
   }
 }
