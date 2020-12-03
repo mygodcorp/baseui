@@ -1,6 +1,6 @@
 {
   "name": "@benjammartin/box",
-  "version": "1.0.22",
+  "version": "1.0.23",
   "description": "Box",
   "main": "lib/cjs/index.js",
   "module": "lib/esm/index.js",
@@ -26,8 +26,8 @@
   "dependencies": {
     "@emotion/react": "^11.1.1",
     "@emotion/styled": "^11.0.0",
-    "styled-system": "^5.1.5",
-    "@types/styled-system": "5.1.10"
+    "@types/styled-system": "5.1.10",
+    "styled-system": "^5.1.5"
   },
   "peerDependencies": {
     "react": "^17.0.1"
