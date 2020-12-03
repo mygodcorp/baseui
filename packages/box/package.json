@@ -1,6 +1,6 @@
 {
   "name": "@benjammartin/basic",
-  "version": "1.0.14",
+  "version": "1.0.15",
   "description": "Box",
   "main": "dist/cjs/index.js",
   "module": "dist/esm/index.js",
