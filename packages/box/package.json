@@ -1,5 +1,5 @@
 {
-  "name": "@benjammartin/box",
+  "name": "@baseui/box",
   "version": "1.0.7",
   "description": "Box",
   "main": "lib/index.js",
