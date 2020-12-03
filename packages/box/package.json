@@ -1,6 +1,6 @@
 {
   "name": "@benjammartin/box",
-  "version": "1.0.10",
+  "version": "1.0.11",
   "description": "Box",
   "main": "lib/index.js",
   "files": [
