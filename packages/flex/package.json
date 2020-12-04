@@ -1,6 +1,6 @@
 {
   "name": "@benjammartin/flex",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Flex",
   "main": "lib/cjs/index.js",
   "module": "lib/esm/index.js",
@@ -24,7 +24,7 @@
     "access": "public"
   },
   "dependencies": {
-    "@benjammartin/box": "^1.0.23",
+    "@benjammartin/box": "1.0.24",
     "@emotion/react": "^11.1.1",
     "@emotion/styled": "^11.0.0",
     "@types/styled-system": "5.1.10",
