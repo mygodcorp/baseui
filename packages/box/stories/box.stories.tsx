@@ -1,14 +1,12 @@
-import * as React from 'react';
-import { Meta } from '@storybook/react/types-6-0';
-import { Box } from '../src';
+import { Meta, Story, Props, Canvas } from '@storybook/addon-docs/blocks';
+import { Box, BoxProps } from '../src/box';
 
 export default {
-  title: 'Box',
-  component: Box
-} as Meta;
+  title: 'Box'
+};
 
-export const Demo: React.FC<{}> = () => (
-  <Box size={4} bg="brand.primary">
-    Hello Box
+export const Basic = () => (
+  <Box p="20px" bg="red" width="200px">
+    Hello
   </Box>
 );

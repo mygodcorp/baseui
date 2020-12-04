@@ -1,8 +1,8 @@
 import React, { FC, ReactNode, ReactElement, forwardRef } from 'react';
 import styled, { CSSObject } from '@emotion/styled';
 import { SpaceProps, variant, BorderProps, border, compose } from 'styled-system';
-import Spinner from '@components/spinner';
-import Box, { BoxProps } from '@components/box';
+import { Spinner } from '@benjammartin/spinner';
+import { Box, BoxProps } from '@benjammartin/box';
 
 type AllowedOps = SpaceProps;
 
@@ -102,7 +102,7 @@ export interface ButtonProps extends AllowedOps {
   rightIcon?: ReactElement;
 }
 
-const Button = forwardRef<HTMLButtonElement, ButtonProps>(
+export const Button = forwardRef<HTMLButtonElement, ButtonProps>(
   ({ children, full, loading, loadingText, borderRadius, leftIcon, rightIcon, ...props }, ref) => {
     return (
       <BaseButton ref={ref} borderRadius={borderRadius} full={full} disabled={loading} {...props}>
@@ -134,5 +134,3 @@ Button.defaultProps = {
   type: 'button',
   full: false
 };
-
-export default Button;

@@ -1,12 +1,12 @@
 import React, { FC } from 'react';
 import styled from '@emotion/styled';
 import { keyframes } from '@emotion/react';
-import Box, { BoxProps } from '@components/box';
+import { Box, BoxProps } from '@benjammartin/box';
 import { color, size, space } from 'styled-system';
 
 type Allowed = BoxProps;
 
-interface SpinnerProps extends Allowed {
+export interface SpinnerProps extends Allowed {
   color?: string;
   size: number;
   title?: string;
@@ -30,7 +30,7 @@ const RotatingLoader = styled('svg')<SpinnerProps>(
   space
 );
 
-const Spinner: FC<SpinnerProps> = ({ title, size, color, ...props }) => (
+export const Spinner: FC<SpinnerProps> = ({ title, size, color, ...props }) => (
   <Box {...props}>
     <RotatingLoader color={color} size={size} />
   </Box>
@@ -41,4 +41,3 @@ Spinner.defaultProps = {
   color: 'ui.error',
   size: 2
 };
-export default Spinner;

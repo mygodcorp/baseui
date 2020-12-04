@@ -1,0 +1,55 @@
+{
+  "name": "@benjammartin/button",
+  "version": "1.0.0",
+  "description": "Buttton",
+  "main": "lib/cjs/index.js",
+  "module": "lib/esm/index.js",
+  "author": "benjammartin <benjammartin@gmail.com>",
+  "license": "MIT",
+  "homepage": "https://github.com/mygodcorp/baseui#readme",
+  "directories": {
+    "lib": "lib",
+    "test": "__tests__"
+  },
+  "exports": {
+    ".": {
+      "require": "./lib/cjs/index.js",
+      "default": "./lib/esm/index.js"
+    }
+  },
+  "files": [
+    "lib"
+  ],
+  "publishConfig": {
+    "access": "public"
+  },
+  "dependencies": {
+    "@benjammartin/spinner": "1.0.0",
+    "@benjammartin/box": "^1.0.23",
+    "@emotion/react": "^11.1.1",
+    "@emotion/styled": "^11.0.0",
+    "@types/styled-system": "5.1.10",
+    "styled-system": "^5.1.5"
+  },
+  "peerDependencies": {
+    "react": "^17.0.1"
+  },
+  "devDependencies": {
+    "react": "^17.0.1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/mygodcorp/baseui.git"
+  },
+  "scripts": {
+    "build": "concurrently yarn:build:*",
+    "build:esm": "tsc --module es2015 --target es5 --outDir lib/esm",
+    "build:cjs": "tsc --module commonjs --target es5 --outDir lib/cjs",
+    "build:types": "tsc --emitDeclarationOnly --declaration --declarationDir lib/types",
+    "test": "echo \"Error: run tests from root\" && exit 1"
+  },
+  "bugs": {
+    "url": "https://github.com/mygodcorp/baseui/issues"
+  },
+  "gitHead": "8c4bb6e5ab3123b4d9032eab720f22906ba9f631"
+}

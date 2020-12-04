@@ -1,31 +1,27 @@
 {
+  "include": ["src", "types", "test"],
   "compilerOptions": {
     "target": "es5",
     "module": "esnext",
     "lib": ["dom", "esnext"],
+    "importHelpers": true,
     "declaration": true,
     "sourceMap": true,
-    "moduleResolution": "node",
-    "skipLibCheck": true,
     "strict": true,
-    "noFallthroughCasesInSwitch": true,
-    "suppressImplicitAnyIndexErrors": true,
     "noImplicitAny": true,
-    "strictFunctionTypes": true,
     "strictNullChecks": true,
+    "skipLibCheck": true,
+    "strictFunctionTypes": true,
     "strictPropertyInitialization": true,
+    "noImplicitThis": true,
+    "alwaysStrict": true,
+    "noUnusedLocals": true,
+    "noUnusedParameters": true,
+    "noImplicitReturns": true,
+    "noFallthroughCasesInSwitch": true,
+    "moduleResolution": "node",
     "jsx": "react",
     "esModuleInterop": true,
-    "allowSyntheticDefaultImports": true,
-    "downlevelIteration": true
-  },
-  "include": ["packages"],
-  "exclude": ["node_modules"],
-  "ts-node": {
-    "compilerOptions": {
-      "module": "CommonJS",
-      "resolveJsonModule": true,
-      "noImplicitAny": false
-    }
+    "allowJs": true
   }
 }

@@ -7,12 +7,9 @@ function resolve(dir) {
 }
 
 module.exports = {
-  stories: ['../packages/**/stories/*.stories.@(js|jsx|ts|tsx)'],
-  addons: ['@storybook/addon-links', '@storybook/addon-essentials'],
+  stories: ['../packages/**/stories/*.stories.@(js|jsx|ts|tsx|mdx)'],
+  addons: ['@storybook/addon-docs', '@storybook/addon-links', '@storybook/addon-essentials'],
   webpackFinal: async (config) => {
-    config.resolve.plugins = config.resolve.plugins || [];
-    config.resolve.plugins.push(new TsconfigPathsPlugin({}));
-    console.log(config.resolve);
     return {
       ...config,
       resolve: {
