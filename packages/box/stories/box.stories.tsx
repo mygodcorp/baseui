@@ -6,7 +6,7 @@ export default {
 };
 
 export const Basic = () => (
-  <Box p="20px" bg="red" width="200px">
+  <Box p="20px" bg="brand.primary" width={9}>
     Hello
   </Box>
 );
