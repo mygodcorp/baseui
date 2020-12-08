@@ -1,6 +1,6 @@
 {
   "name": "@benjammartin/spinner",
-  "version": "1.0.24",
+  "version": "1.0.25",
   "description": "spinner",
   "main": "lib/cjs/index.js",
   "module": "lib/esm/index.js",
