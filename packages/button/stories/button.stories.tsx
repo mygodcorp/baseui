@@ -9,7 +9,15 @@ export default {
 
 export const Default: React.FC<{}> = () => {
   return (
-    <Button id="hello" variant="solid">
+    <Button loading id="hello" variant="solid">
+      Hello
+    </Button>
+  );
+};
+
+export const Outlined: React.FC<{}> = () => {
+  return (
+    <Button loading id="hello" variant="outline">
       Hello
     </Button>
   );

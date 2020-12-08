@@ -1,8 +1,8 @@
-import React, { FC, ReactNode, ReactElement, forwardRef } from 'react';
+import React, { ReactNode, ReactElement, forwardRef } from 'react';
 import styled, { CSSObject } from '@emotion/styled';
 import { SpaceProps, variant, BorderProps, border, compose } from 'styled-system';
 import { Spinner } from '@benjammartin/spinner';
-import { Box, BoxProps } from '@benjammartin/box';
+import { Box } from '@benjammartin/box';
 
 type AllowedOps = SpaceProps;
 
@@ -67,23 +67,7 @@ const variants = variant({
   }
 });
 
-const LoadingState: FC<BoxProps & { title?: string }> = ({ title }) => {
-  return (
-    <Box
-      position={title ? 'relative' : 'absolute'}
-      mr={2}
-      justifyContent="center"
-      alignItems="center">
-      <Spinner title={title} size={2} color="ui.primary" />
-    </Box>
-  );
-};
-
-const BaseButton = styled.button<SpaceProps & BorderProps & { full?: boolean }>(
-  variants,
-  compose(border),
-  (props) => ({ width: props.full ? '100%' : 'auto' })
-);
+const BaseButton = styled.button<SpaceProps & BorderProps & { full?: boolean }>(variants, compose(border), (props) => ({ width: props.full ? '100%' : 'auto' }));
 
 type Native = React.ComponentPropsWithoutRef<'button'>;
 
@@ -102,32 +86,34 @@ export interface ButtonProps extends AllowedOps {
   rightIcon?: ReactElement;
 }
 
-export const Button = forwardRef<HTMLButtonElement, ButtonProps>(
-  ({ children, full, loading, loadingText, borderRadius, leftIcon, rightIcon, ...props }, ref) => {
-    return (
-      <BaseButton ref={ref} borderRadius={borderRadius} full={full} disabled={loading} {...props}>
-        {!loading && leftIcon && (
-          <Box width={2} as="span" mr={2}>
-            {leftIcon}
-          </Box>
-        )}
-        {loading && <LoadingState title={loadingText} />}
-        {loading
-          ? loadingText || (
-              <Box as="span" opacity={0}>
-                {children}
-              </Box>
-            )
-          : children}
-        {!loading && rightIcon && (
-          <Box width={2} as="span" ml={2}>
-            {rightIcon}
-          </Box>
-        )}
-      </BaseButton>
-    );
-  }
-);
+export const Button = forwardRef<HTMLButtonElement, ButtonProps>(({ children, full, loading, loadingText, borderRadius, leftIcon, rightIcon, ...props }, ref) => {
+  return (
+    <BaseButton ref={ref} borderRadius={borderRadius} full={full} disabled={loading} {...props}>
+      {!loading && leftIcon && (
+        <Box width={2} as="span" mr={2}>
+          {leftIcon}
+        </Box>
+      )}
+      {loading && (
+        <Box position={loadingText ? 'relative' : 'absolute'} mr={2} justifyContent="center" alignItems="center">
+          <Spinner title={loadingText} size={2} />
+        </Box>
+      )}
+      {loading
+        ? loadingText || (
+            <Box as="span" opacity={0}>
+              {children}
+            </Box>
+          )
+        : children}
+      {!loading && rightIcon && (
+        <Box width={2} as="span" ml={2}>
+          {rightIcon}
+        </Box>
+      )}
+    </BaseButton>
+  );
+});
 
 Button.defaultProps = {
   variant: 'solid',

@@ -1,7 +1,7 @@
 import React from 'react';
 import { Meta } from '@storybook/react/types-6-0';
-import Flex from './flex';
-import Box, { BoxProps } from '@components/box';
+import { Flex } from '../src';
+import { Box } from '@benjammartin/box';
 
 export default {
   title: 'Flexbox',
